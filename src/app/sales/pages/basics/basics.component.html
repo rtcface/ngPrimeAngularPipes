@@ -1,0 +1,82 @@
+<div class="textlayout">
+    <h1>Basics Pipes</h1>
+    <p>
+        Pipes included in Angular - iusally in the Common mudule.
+    </p>
+</div>
+
+<div class="p-grid">
+    <div class="p-col-4"><p-card header='uppercase' 
+        [subheader]='nameUpper | uppercase'>    
+        {{nameUpper | uppercase}}    
+    </p-card> </div>
+    <div class="p-col-4"><p-card header='lowercase' 
+        [subheader]='nameLower | lowercase'>    
+        {{nameLower | lowercase}}    
+    </p-card> </div>
+    <div class="p-col-4"><p-card header='titlecase' 
+        [subheader]='nameCoplet | titlecase'>    
+        {{nameUpper | titlecase}}    
+    </p-card> </div>
+   
+    
+</div>
+
+
+<div class="textlayout">
+    <h1>Date | Pipe | </h1>
+    <p>
+        Pipes for customize dates.
+    </p>
+</div>
+
+<div class="p-grid">
+    <div class="p-col-6">
+        <p-panel >
+            <ng-template pTemplate="header">
+                Date Type
+            </ng-template>
+                <ul>
+                    <li>date</li>
+                    <li>date | date</li>
+                    <li>date | date:'short'</li>
+                    <li>date | date:'long'</li>
+                    <li>date | date:'MMMM'</li>
+                    <li>date | date:'MMMM dd,yyyy'</li>
+                </ul>
+            <ng-template pTemplate="footer">
+                <ul>
+                    <li> date | date:'long':'GMT-6'</li>
+                    <li> date | date:'long':'GMT-4'</li>
+                    <li> date | date:'long':'':'fr'</li>
+
+                </ul>
+            </ng-template>
+        </p-panel>        
+    </div>
+    <div class="p-col-6">
+        <p-panel >
+            <ng-template pTemplate="header">
+                Date Value
+            </ng-template>
+                <ul>
+                    <li>{{ date }}</li>
+                    <li>{{ date | date }}</li>
+                    <li>{{ date | date:'short'  }}</li>
+                    <li>{{ date | date:'long'}}</li>
+                    <li>{{ date | date:'MMMM'}}</li>
+                    <li>{{ date | date:'MMMM dd,yyyy'}}</li>
+                </ul>
+            <ng-template pTemplate="footer">
+                <ul>
+                    <li>{{ date | date:'long':'GMT-6'}}</li>         
+                    <li>{{ date | date:'long':'GMT-4'}}</li>
+                    <li>{{ date | date:'long':'':'fr'}}</li>
+                </ul>
+            </ng-template>
+        </p-panel>        
+    </div>
+    
+</div>
+
+
