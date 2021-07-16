@@ -42,3 +42,25 @@
         </p-table>
     </div>
 </div>
+
+
+<div class="p-grid">
+    <div class="p-col p-mt-2">
+        <p-table [value]="heroes | slice:0">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th pSortableColumn="name">Name <p-sortIcon field="name"></p-sortIcon></th>
+                    <th pSortableColumn="flying">Flying <p-sortIcon field="flying"></p-sortIcon></th>
+                    <th pSortableColumn="color">Color <p-sortIcon field="color"></p-sortIcon></th>                
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-heroe>
+                <tr>
+                    <td>{{heroe.name}}</td>
+                    <td>{{heroe.flying | pipeFlying | titlecase }}</td>
+                    <td>{{heroe.color }}</td>                    
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>
