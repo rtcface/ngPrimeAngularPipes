@@ -1,1 +1,36 @@
-<p>numbers works!</p>
+<div class="textlayout">
+    <h1>
+        Decimal Pipes and Porcentage
+    </h1>
+    <p>
+        Pipes included in Angular - usually in the common module
+    </p>
+</div>
+
+<div class="p-grid">
+    <div class="p-col-4">
+        <p-panel>
+            <ng-template pTemplate="header"> Net Sales</ng-template>
+                <p-card subheader='of the present year'>
+                   <i class="pi pi-dollar"></i> {{ netsales + 1000000 | number:'1.2-2' }}
+                </p-card>                       
+        </p-panel>
+    </div>
+    <div class="p-col-4">
+        <p-panel>
+            <ng-template pTemplate='header'> Gross Sales </ng-template>
+            <p-card subheader='of the present year'>
+                {{ netsales + 3000000 | currency:'USD':'symbol-narrow':'1.4-4'}}
+            </p-card>
+        </p-panel>
+    </div>
+    <div class="p-col-4">
+        <p-panel>
+            <ng-template pTemplate='header'>Porcentage Gain</ng-template>
+            <p-card subheader='of the present year'>
+                {{ porcentage | percent:'2.2-2' }}
+            </p-card>
+            
+        </p-panel>
+    </div>
+</div>

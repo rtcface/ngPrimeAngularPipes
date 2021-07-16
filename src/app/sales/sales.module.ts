@@ -6,6 +6,9 @@ import { BasicsComponent } from './pages/basics/basics.component';
 import { OrderComponent } from './pages/order/order.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UppercaseCustom } from './pipes/uppercaseCustom.pipe';
+import { FlyingPipe } from './pipes/pipeFlying';
+import { OrderPipe } from './pipes/order.pipe';
 
 
 
@@ -14,7 +17,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NumbersComponent,
     NoComunesComponent,
     BasicsComponent,
-    OrderComponent
+    OrderComponent,
+    UppercaseCustom,
+    FlyingPipe,
+    OrderPipe,
   ],
   
   exports: [NumbersComponent,
